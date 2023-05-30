@@ -1,16 +1,16 @@
 import { Vector3 } from "three";
 import { useEffect, useRef, useState } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame, } from "@react-three/fiber";
 import {
-  useGLTF,
+  // useGLTF,
   SpotLight,
-  useDepthBuffer,
-  CameraControls,
+  // useDepthBuffer,
+  // CameraControls,
   useTexture,
   OrbitControls,
 } from "@react-three/drei";
 import { PLYLoader } from "three/examples/jsm/loaders/PLYLoader.js";
-import * as THREE from "three";
+// import * as THREE from "three";
 export default function App() {
   return (
     <Canvas
@@ -31,29 +31,25 @@ export default function App() {
 function Scene() {
   // This is a super cheap depth buffer that only renders once (frames: 1 is optional!), which works well for static scenes
   // Spots can optionally use that for realism, learn about soft particles here: http://john-chapman-graphics.blogspot.com/2013/01/good-enough-volumetrics-for-spotlights.html
-  const depthBuffer = useDepthBuffer({ frames: 1 });
-  const ref = useRef(null);
-  const { scene } = useThree();
+  // const depthBuffer = useDepthBuffer({ frames: 1 });
 
   const [model, SetModel] = useState(null);
 
 
   useEffect(() => {
     new PLYLoader().load("models/ply/Lucy100k.ply", function (geometry) {
-      console.log("three", scene);
-      console.log("geometry", geometry);
-      console.log("ref", ref.current);
+  
 
       geometry.scale(0.0012, 0.0012, 0.0012);
       geometry.computeVertexNormals();
 
-      const material = new THREE.MeshLambertMaterial();
+      // const material = new THREE.MeshLambertMaterial();
 
-      const mesh = new THREE.Mesh(geometry, material);
-      mesh.rotation.y = -Math.PI / 2;
-      mesh.position.y = 0;
-      mesh.castShadow = true;
-      mesh.receiveShadow = true;
+      // const mesh = new THREE.Mesh(geometry, material);
+      // mesh.rotation.y = -Math.PI / 2;
+      // mesh.position.y = 0;
+      // mesh.castShadow = true;
+      // mesh.receiveShadow = true;
       // scene.add(mesh);
 
       SetModel(geometry);
@@ -96,7 +92,7 @@ function Scene() {
 function MovingSpot({ vec = new Vector3(), ...props }) {
   const {position} = props
   const light = useRef();
-  const viewport = useThree((state) => state.viewport);
+  // const viewport = useThree((state) => state.viewport);
   const texture = useTexture('/texture/disturb.jpg')
   // useFrame((state) => {
   //   light.current.target.position.lerp(
