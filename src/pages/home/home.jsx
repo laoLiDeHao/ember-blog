@@ -1,8 +1,9 @@
-import './home.scss'
-export default function Home(){
-
-
-    return<>
-        <h1>Home page</h1>
+import DefScene from "../../component/defScene";
+import "./home.scss";
+export default function Home() {
+  return (
+    <>
+      <DefScene />
     </>
+  );
 }
