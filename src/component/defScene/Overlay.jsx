@@ -1,6 +1,6 @@
 
 
-export default function(){
+export default function Overlay(){
 
 
 
@@ -12,15 +12,15 @@ export default function(){
         dev collective
       </a>
       <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px', fontFamily: 'Meslo', lineHeight: '1.6em', whiteSpace: 'pre' }}>
-        &gt; npx gltfjsx model.glb --transform --simplify
+        &gt; contact me on Youtube EmberUB
         <br />
         &gt; ll
         <br />
-        {`-rw-r--r-- 1 ph  94M model.glb`}
+        {`-rw-r--r-- 1 ph  SAME AS BILIBILI`}
         <br />
-        {`-rw-r--r-- 1 ph 406K model-transformed.glb`}
+        {`-rw-r--r-- 1 ph XIIAN CN`}
       </div>
-      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>29/12/2022</div>
+      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>30/05*2023</div>
     </div>
   </>
 }

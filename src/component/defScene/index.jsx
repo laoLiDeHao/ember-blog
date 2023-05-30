@@ -6,7 +6,10 @@ import Overlay from "./Overlay";
 export default function DefScene() {
   return (
     <>
-      <App />
+      <Suspense fallback={null}>
+        <App />
+      </Suspense>
+      <Overlay/>
       <div className="header">
         <span>ART</span>
         <span>Design</span>

@@ -6,7 +6,6 @@ import {
   useTexture,
   OrbitControls,
   Html,
-  Environment,
 } from "@react-three/drei";
 import { PLYLoader } from "three/examples/jsm/loaders/PLYLoader.js";
 
@@ -19,13 +18,11 @@ export default function App() {
         shadows
         dpr={[1, 2]}
         camera={{ position: [-2, 2, 6], fov: 80, near: 0.01, far: 20000 }}
-        // color="#000"
       >
-        {/* <fog attach="fog" args={["#202020", 5, 20]} /> */}
         <ambientLight intensity={0.015} />
         <Scene />
         <OrbitControls enablePan={false} />
-        {/* <Environment background preset="sunset" blur={0.8} /> */}
+
       </Canvas>
       <div className="topleft">Desgine</div>
     </>
