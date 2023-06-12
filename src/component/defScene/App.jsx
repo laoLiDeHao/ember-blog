@@ -12,7 +12,7 @@ import { PLYLoader } from "three/examples/jsm/loaders/PLYLoader.js";
 // import * as THREE from "three";
 export default function App() {
   return (
-    <>
+    <div className="defScene">
    
       <Canvas
         shadows
@@ -25,7 +25,7 @@ export default function App() {
 
       </Canvas>
       <div className="topleft">Desgine</div>
-    </>
+    </div>
   );
 }
 

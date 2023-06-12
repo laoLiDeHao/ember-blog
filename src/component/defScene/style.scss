@@ -29,13 +29,20 @@ body {
   overflow: hidden;
   overscroll-behavior-y: none;
   font-family: 'Amiri', serif;
-  color: white;
-  background: black;
-  background: radial-gradient(circle at bottom center, rgba(60, 60, 60, 1) 0%, rgba(0, 0, 0, 1) 58%);
-  cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png') 39 39, auto;
+  // color: white;
+  // background: black;
+  // background: radial-gradient(circle at bottom center, rgba(60, 60, 60, 1) 0%, rgba(0, 0, 0, 1) 58%);
+  // cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png') 39 39, auto;
   font-family: inter;
 }
 
+
+.defScene{
+  width: 100vw;
+  height: 100vh;
+  background: black;
+   cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png') 39 39, auto;
+}
 @keyframes fade-in {
   from {
     opacity: 0;
