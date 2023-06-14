@@ -66,8 +66,8 @@ const Tablewave = ({
 };
 
 const Flower = ({
-  scale = [.05, .05, .05],
-  position = [0, 0, 0],
+  scale = [.05, .03, .05],
+  position = [0, .76, 0],
   rotation = [0, 0, 0],
 }) => {
   const tw = useLoader(
