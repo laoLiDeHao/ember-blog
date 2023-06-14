@@ -2,6 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from '../pages/home/home';
 import About from '../pages/about/about';
 import Pages from '../pages';
+import PrintAds from "../pages/print-ads";
+
+
 function AppRoute() {
   return (
     <BrowserRouter>
@@ -9,6 +12,8 @@ function AppRoute() {
         <Route path='/' element={<Pages/>}></Route>
         <Route path='/home' element={<Home/>}></Route>
         <Route path='/about' element={<About/>}></Route>
+        {/* shows */}
+        <Route path='/printAds' element={<PrintAds/>}></Route>
       </Routes>
     </BrowserRouter>
   );

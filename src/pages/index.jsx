@@ -1,8 +1,43 @@
 import CloudText from "../component/cloudText";
 import styles from "./page.module.css";
 
-
 export default function Home() {
+  // const getFile = () => {
+  //   return new Promise((responce, reject) => {
+  //     const xhr = new XMLHttpRequest();
+  //     xhr.addEventListener(
+  //       "progress",
+  //       (e) => {
+  //         console.log("progress watch");
+  //         if (e.lengthComputable) {
+  //           const progress = e.loaded / e.total *100;
+  //           console.log("upload,percent:", progress+'%');
+  //         }
+  //       },
+  //       false
+  //     );
+
+  //     xhr.onreadystatechange = (e) => {
+  //       if (xhr.readyState === 4 && xhr.status === 200) {
+  //         const response = xhr.responseText;
+  //         console.log(response);
+  //         responce(response);
+  //       }
+  //     };
+
+  //     xhr.open(
+  //       "GET",
+  //       "https://xuhuanqidian-1311574791.cos.ap-beijing.myqcloud.com/modelsource/10001/Hainanzhonglou.fbx",
+  //       true
+  //     );
+  //     xhr.send();
+  //   });
+  //   // return fetch("http://transfer.xuhuanqidian.com", options)
+  //   //   .then((response) =>{ response.json()})
+  //   //   .then((data) => res.data.data)
+  //   //   .catch((error) => console.error(error));
+  // };
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>

@@ -3,10 +3,15 @@ import { useRef, useState, useMemo, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Text, TrackballControls } from "@react-three/drei";
 import { randomText } from "./random-text";
+import fontstyle from './NotoSerifSC-Black.otf'
+// import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
+// import boldtext from './Inter-Bold.woff'
 
 function Word({ children, ...props }) {
+
   const color = new THREE.Color();
   const fontProps = {
+    font:fontstyle,
     fontSize: 2.5,
     letterSpacing: -0.05,
     lineHeight: 1,
@@ -30,7 +35,7 @@ function Word({ children, ...props }) {
     ref.current.quaternion.copy(camera.quaternion);
     // Animate font color
     ref.current.material.color.lerp(
-      color.set(hovered ? "#fa2720" : "white"),
+      color.set(hovered ? "#fa2720" : "grey"),
       0.1
     );
   });
@@ -48,6 +53,7 @@ function Word({ children, ...props }) {
 }
 
 function Cloud({ count = 4, radius = 20 }) {
+
   // Create a count x count random words with spherical distribution
   const words = useMemo(() => {
     const temp = [];
@@ -71,6 +77,7 @@ function Cloud({ count = 4, radius = 20 }) {
       key={index}
       position={pos}
       children={word}
+
       onClick={() => {
         console.log(words[index]);
       }}
