@@ -7,7 +7,7 @@ import UnitMusic from "./unit-music";
 export default function CaseFoodTable() {
   return (
     <>
-      <Canvas>
+      <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [1, 2, 2] }}>
         <ambientLight />
 
         <Grid
@@ -31,13 +31,7 @@ export default function CaseFoodTable() {
         <Scene></Scene>
         <OrbitControls />
       </Canvas>
-      <div
-        style={{
-          position: "absolute",
-          top: "0px",
-          left: "0px",
-        }}
-      >
+      <div style={{}}>
         <UnitMusic />
       </div>
     </>
