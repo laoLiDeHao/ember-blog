@@ -48,7 +48,13 @@ const Scene = () => {
 
   return (
     <group>
-      <Menuboard position={[1, 0, 1]} rotation={[0, Math.PI / 2, 0]} />
+      <Menuboard
+        clickfun={() => {
+          console.log("menu open");
+        }}
+        position={[1, 0, 1]}
+        rotation={[0, Math.PI / 2, 0]}
+      />
       <Menuboard
         position={[0, 0.77, -0.8]}
         scale={[0.002, 0.002, 0.002]}
@@ -139,6 +145,7 @@ const Menuboard = ({
   scale = [0.01, 0.01, 0.01],
   position = [0, 0, 0],
   rotation = [0, 0, 0],
+  clickfun = () => {},
 }) => {
   const tw = useLoader(
     GLTFLoader,
@@ -157,7 +164,12 @@ const Menuboard = ({
       modellist["billboard4"] = item;
   });
   return (
-    <group scale={scale} position={position} rotation={rotation}>
+    <group
+      onClick={() => clickfun()}
+      scale={scale}
+      position={position}
+      rotation={rotation}
+    >
       <mesh
         position={[-125, 0, 0]}
         geometry={modellist[`billboard${billboard}`].geometry}
