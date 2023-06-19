@@ -1,27 +1,26 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from '../pages/home/home';
-import About from '../pages/about/about';
-import Pages from '../pages';
+import Home from "../pages/home/home";
+import About from "../pages/about/about";
+import Pages from "../pages";
 import PrintAds from "../pages/print-ads";
-
+import Gaming from "../pages/Gaming";
 
 function AppRoute() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Pages/>}></Route>
-        <Route path='/home' element={<Home/>}></Route>
-        <Route path='/about' element={<About/>}></Route>
+        <Route path="/" element={<Pages />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
         {/* shows */}
-        <Route path='/printAds' element={<PrintAds/>}></Route>
+        <Route path="/printAds" element={<PrintAds />}></Route>
+        <Route path="/Gaming" element={<Gaming />}></Route>
       </Routes>
     </BrowserRouter>
   );
 }
 
-
 export default AppRoute;
-
 
 // function Inits() {
 //   return (<div className="App">
@@ -41,5 +40,3 @@ export default AppRoute;
 //     </header>
 //   </div>)
 // }
-
-
