@@ -4,6 +4,8 @@ import About from "../pages/about/about";
 import Pages from "../pages";
 import PrintAds from "../pages/print-ads";
 import Gaming from "../pages/Gaming";
+import PointCrush from "../projects-dev/point-crush";
+import Particals1 from "../projects-dev/particals1";
 
 function AppRoute() {
   return (
@@ -15,6 +17,8 @@ function AppRoute() {
         {/* shows */}
         <Route path="/printAds" element={<PrintAds />}></Route>
         <Route path="/Gaming" element={<Gaming />}></Route>
+        <Route path="/PointCrush" element={<PointCrush />}></Route>
+        <Route path="/Particals1" element={<Particals1 />}></Route>
       </Routes>
     </BrowserRouter>
   );
