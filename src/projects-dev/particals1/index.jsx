@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import createView from "./script";
 export default function Particals1() {
   const dom = useRef(null);
-  const engine = useRef(null);
+  // const engine = useRef(null);
   useEffect(() => {
     createView(dom.current);
   }, []);

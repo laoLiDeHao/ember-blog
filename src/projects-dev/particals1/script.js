@@ -9,7 +9,7 @@ import Stats from 'three/examples/jsm/libs/stats.module'
 
 export default function createView(dom) {
   let group;
-  let container, stats;
+  let stats;
   const particlesData = [];
 
   let positions, colors;
@@ -267,11 +267,11 @@ export default function createView(dom) {
    * Animate
    */
 
-  const clock = new THREE.Clock()
+  // const clock = new THREE.Clock()
 
   const tick = () => {
 
-    const elapsedTime = clock.getElapsedTime()
+    // const elapsedTime = clock.getElapsedTime()
 
     // Update objects
     // sphere.rotation.y = .5 * elapsedTime
