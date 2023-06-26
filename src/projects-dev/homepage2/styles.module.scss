@@ -1,0 +1,30 @@
+.homepage2 {
+  width: 100rem;
+  height: 100rem;
+  background: #1a1e21;
+  margin: auto;
+  font-size: 1rem;
+  header {
+    width: calc(100% - 1rem);
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      span:nth-child(1) {
+        font-size: 4rem;
+        font-weight: 900;
+        font-family: "Agency FB";
+        color: #3cd1e6;
+      }
+    }
+    .right{
+      font-size: 4rem;
+      font-weight: 900;
+      font-family: "Agency FB";
+      color: #3cd1e6;
+    }
+  }
+  
+}
